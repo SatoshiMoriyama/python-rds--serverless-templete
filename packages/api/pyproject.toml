@@ -1,0 +1,42 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "boto3>=1.35.0",
+    "fastapi>=0.129.0",
+    "mangum>=0.21.0",
+    "psycopg[binary]>=3.3.2",
+    "db",
+    "sqlmodel>=0.0.33",
+]
+
+[tool.uv.sources]
+db = { path = "../db", editable = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.1",
+    "uvicorn>=0.40.0",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import順)
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade (古い書き方の検出)
+]
+ignore = ["B008"]
+
+[tool.ruff.format]
+quote-style = "double"

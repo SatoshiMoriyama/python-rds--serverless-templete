@@ -204,3 +204,7 @@ blog_content/*.jpeg
 blog_content/*.gif
 blog_content/*.svg
 blog_content/*.webp
+
+# Python
+__pycache__/
+.venv/
