@@ -1,0 +1,17 @@
+{
+    "name": "db",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "generate": "uv run alembic revision --autogenerate -m",
+        "migrate": "uv run alembic upgrade head",
+        "drop": "uv run alembic downgrade base",
+        "history": "uv run alembic history",
+        "current": "uv run alembic current",
+        "seed": "uv run python scripts/seed.py",
+        "reset": "uv run alembic downgrade base && uv run alembic upgrade head && uv run python scripts/seed.py",
+        "lint": "uv run ruff check .",
+        "lint:fix": "uv run ruff check --fix .",
+        "format": "uv run ruff format ."
+    }
+}
