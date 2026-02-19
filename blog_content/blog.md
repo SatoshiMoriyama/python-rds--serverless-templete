@@ -65,7 +65,7 @@ API と DB は Python で統一し、`db` パッケージを `api` から共有�
 
 ### アーキテクチャ図
 
-Draw.io MCPで構成図を書いてみました。
+Draw.io MCP で構成図を書いてみました。
 
 ![alt text](architecture.drawio.svg)
 
@@ -362,5 +362,4 @@ FastAPI × Aurora Serverless v2 を CDK でデプロイするテンプレート�
 
 個人的には FastAPI の `/docs` に初めてアクセスしたとき、コードを書いただけで Swagger UI が自動生成されていたのには驚きました。Python のエコシステムも進化していますね。
 
-今後何か使うことがあったらもっと発展させていきたいと思います！
 今後何か使うことがあったらもっと発展させていきたいと思います！
